@@ -8,13 +8,14 @@
 
         public Nitro(float speedBonus) : base(speedBonus)
         {
+            speedBonus = 0f;
         }
 
         public override VehicleType Type
         {
             get
             {
-                return VehicleType.None;
+                return VehicleType.Car;
             }
         }
     }

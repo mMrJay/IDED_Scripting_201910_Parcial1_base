@@ -2,6 +2,7 @@
 {
     public abstract class Vehicle
     {
+
         protected float baseMaxSpeed;
 
         protected int Level { get; set; }
@@ -35,13 +36,24 @@
 
             if (Type == part.Type || part.Type == VehicleType.Any)
             {
+                CurrentPart = part;
+                baseMaxSpeed += baseMaxSpeed * CurrentPart.SpeedBonus;
+                result = true;
             }
+            else
+                result = false;
 
             return result;
         }
 
         public void Upgrade()
         {
+            if (Level <= 3)
+            {
+                Level++;
+                baseMaxSpeed += baseMaxSpeed*0.5F*Level;
+                CurrentPart.Upgrade();
+            }
         }
     }
 }
