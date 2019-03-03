@@ -1,0 +1,15 @@
+Parcial (2.8 / 5.0)
+	* SpeedBonus en los Part no necesariamente tiene valor 1.5 en todos los casos. Puede tener valores diferentes.
+	* Durability no necesariamente tiene valor 0 o 1. Puede tener valores en cualquiera de esos rangos.
+	* El accesor SpeedBonus de Part siempre devuelve 0. Así no hay manera de verificar que la instancia tiene los valores deseados.
+	* Part.Upgrade() soporta una 4ta mejora.
+	* Part.Upgrade() sube los parámetros erradamente. Por cada subida de nivel no incrementa el 3% sino el 30%, y además multiplicado por el nivel. Debe ser que por cada mejora suba el 3% del original (de 100, al 1er upgrade sube 3, al 2do otros 3 y al 3ro otros 3. La implementación propuesta sube 30 al primero, 60 al 2do y 90 al 3er upgrade).
+	* El accesor MaxSpeed de Vehicle siempre devuelve 0. Así no hay manera de verificar que la instancia tiene los valores deseados.
+	* Vehicle.Upgrade() soporta una 4ta mejora.
+	* Vehicle.Upgrade() sube los parámetros erradamente; de manera semejante a Part.Upgrade()
+	* Por qué el constructor de Muffler y Nitro asigna 0 a su SpeedBonus y no  el valor del parámetro del constructor? Eso deshace todo lo que haga el constructor base.
+
+Bonificación (0.0/ 0.5)
+	No se presentó propuesta para la bonificación
+
+Total: 2.8 / 5.0
